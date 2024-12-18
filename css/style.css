@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --main-bg-color: #f9e0bb;
+  --brown: #c38154;
+  --dark: #884a39;
+  --selected-dark: #24140f;
+  --covered-dark: #5a3126;
+  --yellow: #ffc26f;
+  --white: #ffffff;
+  --black: #000000;
+  --red: #c93e36;
+  --green: #b0cc39;
+  --extra: #663919;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Bahnschrift";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  height: 100vh;
+  background-size: cover;
+  background-image: url(../_images/login-background.png);
+}
+/*--------------------------------Header--------------------------------*/
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header .header__navbar {
+  background-color: var(--dark);
+  height: 50px;
+}
+.header .header__image {
+  flex: 1;
+  background-size: cover;
+  background-image: url(../_images/header-hero.png);
+
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+.header .header__image p {
+  background-color: var(--brown);
+  max-width: 500px;
+  max-height: 110px;
+  font-size: 50px;
+  font-weight: 100;
+  font-stretch: condensed;
+}
+.header .header__image h1 {
+  max-width: 700px;
+  height: 160px;
+  margin-top: 2rem;
+  font-size: 65px;
+  font-weight: 600;
+  font-stretch: semi-condensed;
+}
+.header .header__image button {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  margin-top: 12rem;
+  transition: 0.4s;
+}
+.header .header__image button:hover {
+  background-color: var(--covered-dark);
+  border-color: var(--yellow);
+}
+.header .header__image button a {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: condensed;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/*--------------------------------Navbar--------------------------------*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  height: 100%;
+  margin: auto;
+}
+
+.navbar .navbar__brand a {
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: condensed;
+  color: var(--white);
+  padding-right: 2rem;
+  text-decoration: none;
+}
+.navbar .navbar__list ul {
+  display: flex;
+}
+.navbar .navbar__list li {
+  padding: 15px 10px;
+}
+.navbar .navbar__list a {
+  font-size: 20px;
+  font-weight: 400;
+  font-stretch: semi-condensed;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+.navbar .navbar__list p {
+  font-size: 20px;
+  font-weight: 400;
+  font-stretch: semi-condensed;
+  text-transform: uppercase;
+  background-color: var(--selected-dark);
+  color: var(--yellow);
+  text-decoration: none;
+}
+.active__li {
+  transition: 0.2s;
+}
+.active__li:hover {
+  background-color: var(--covered-dark);
+}
+.current-page {
+  background-color: var(--selected-dark);
+}
+.navbar--left {
+  margin-right: auto;
+}
+/*--------------------------------Form--------------------------------*/
+.header .header__greetings {
+  background-color: var(--brown);
+  height: 200px;
+  color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+.header .header__greetings h1 {
+  font-size: 65px;
+  font-weight: 900;
+  font-stretch: extra-condensed;
+}
+.header .header__form {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 80vh;
+}
+.header .header__form .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 100%;
+  background-color: var(--main-bg-color);
+  color: var(--main-bg-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+.header .header__form .form input {
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border: none;
+
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: condensed;
+
+  width: 450px;
+}
+.header .header__form .form input::placeholder {
+  color: #b3b3b3;
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: condensed;
+}
+
+.header .header__form .form input[type="submit"] {
+  background-color: var(--brown);
+  color: var(--white);
+  width: 250px;
+  margin-top: 60px;
+  transition: 0.2s;
+  font-weight: 600;
+  font-stretch: condensed;
+}
+.header .header__form .form input[type="submit"]:hover {
+  background-color: var(--extra);
+}
+.header .header__form .form a {
+  width: 200px;
+  text-decoration: none;
+  color: var(--dark);
+}
+.form__button {
+  margin-top: 20px;
+}
+.form__label {
+  color: #000000;
+  justify-content: normal;
+  align-items: normal;
+}
+.form__label input {
+  width: 10px;
+}
+.label__checkmark {
+  width: 10px;
+}
+/*--------------------------------Catalog--------------------------------*/
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+}
+.content .content__filter-box {
+  background-color: var(--main-bg-color);
+  width: 300px;
+  height: 100%;
+  margin-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .content__main-box {
+  background-color: var(--main-bg-color);
+  width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.filter__panel {
+  background-color: var(--white);
+  width: 260px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.filter-content h2 {
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  text-align: left;
+}
+.filter-content h3 {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.accordion-item label {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--brown);
+  padding-left: 10px;
+  padding-top: 1px;
+}
+.sort__panel {
+  background-color: var(--white);
+  width: 560px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+}
+.sort__panel p {
+  margin-right: 20px;
+}
+.aparts__panel {
+  background-color: var(--white);
+  width: 560px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.accordion-header {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-content {
+  padding: 10px;
+}
+.accordion-item {
+  display: flex;
+  margin-right: auto;
+}
+.accordion-placeholder {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.accordion-placeholder input {
+  border-radius: 6px;
+  border: 2px solid var(--covered-dark);
+  height: 25px;
+  width: 80px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.accordion-placeholder input::placeholder {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--covered-dark);
+  text-transform: uppercase;
+  text-align: center;
+}
+.filter__button button {
+  width: 175px;
+  height: 30px;
+  margin-bottom: 10px;
+  transition: 0.2s;
+
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 400;
+  font-stretch: 75px;
+  text-transform: uppercase;
+}
+.apply-button button {
+  background-color: var(--brown);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.apply-button button:hover {
+  background-color: var(--white);
+  color: var(--brown);
+  border: 2px solid var(--brown);
+}
+.reset-button button {
+  background-color: var(--white);
+  color: var(--brown);
+  border: 2px solid var(--brown);
+  cursor: pointer;
+}
+.reset-button button:hover {
+  background-color: var(--red);
+  color: white;
+  border: none;
+}
+
+.sort-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+.sort-content h2 {
+  margin-right: 10px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.dropdown-header {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: var(--white);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-header:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.aparts-content {
+  display: flex;
+  flex-direction: column;
+}
+.aparts-info {
+  display: flex;
+  flex-direction: row;
+}
+.aparts-button {
+  margin-left: auto;
+}
+.image-block {
+  margin: 20px;
+}
+.image-block img {
+  width: 160px;
+  height: 160px;
+  border-radius: 7px;
+}
+.text-block {
+  margin: 20px 20px 20px 10px;
+}
+.text-block h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.location-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+  max-width: 160px;
+}
+.info-text {
+  font-family: "Roboto";
+  font-size: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.aparts-button button {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color: var(--white);
+  background-color: var(--red);
+  padding: 10px 40px;
+  border: 2px solid var(--red);
+}
+.aparts-button button:hover {
+  color: var(--red);
+  background-color: transparent;
+}
+.scroll-area {
+  overflow-y: auto;
+  height: 85vh;
+}
+.scroll-area::-webkit-scrollbar {
+  width: 5px;
+}
+.scroll-area::-webkit-scrollbar-thumb {
+  background-color: var(--dark);
+  border-radius: 5px;
+}
+.scroll-area::-webkit-scrollbar-track {
+  background-color: var(--main-bg-color);
+}
+
+.content__apartment-box {
+  background-color: var(--main-bg-color);
+  width: 900px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
+.info-panel {
+  width: 500px;
+  height: fit-content;
+  background-color: var(--white);
+  margin: 50px 30px;
+
+  padding: 20px;
+  border-radius: 3px;
+}
+.panel-content {
+  display: flex;
+  flex-direction: column;
+}
+.panel-content h1 {
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+.apart-image-block {
+  width: 430px;
+  height: 220px;
+  border-radius: 3px;
+  border: 2px solid var(--dark);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.apart-image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.apart-important-info-block {
+  display: flex;
+  flex-direction: row;
+  width: 430px;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  text-align: center;
+}
+.info-content h3 {
+  font-size: 20px;
+}
+.info-content p {
+  font-size: 25px;
+  font-weight: bold;
+}
+.apart-info-text {
+  font-family: "Roboto";
+  font-size: 18px;
+  width: 430px;
+  text-align: justify;
+}
+.price-panel {
+  width: 300px;
+  height: fit-content;
+  background-color: var(--white);
+  margin: 50px 30px;
+
+  padding: 20px;
+  border-radius: 3px;
+}
+.price-title {
+  margin-bottom: 30px;
+
+  font-size: 25px;
+}
+.funny-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.fun-right {
+  color: var(--extra);
+}
+.button-container {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+}
+/*--------------------------------Footer--------------------------------*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark);
+  color: var(--white);
+  height: 100px;
+
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+}
+/*--------------------------------Responsive--------------------------------*/
+@media (max-width: 900px) {
+  .header .header__image {
+    font-size: 44px;
+    text-align: center;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar .navbar__brand {
+    text-align: center;
+    width: 100%;
+    font-size: 34px;
+  }
+  .navbar .navbar__list a {
+    font-size: 18px;
+  }
+  .header .header__navbar {
+    height: 100px;
+  }
+}
